@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airplane</title>
+    <link rel="stylesheet" href="airplane.css">
+    <script src="airplane.js"></script>
+    <link rel="icon" type="image/png" href="img/8 Ball Globe.jpg">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/descarga (1).jpg" alt="">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#buscador">Buscar Destinos</a></li>
+                <li><a href="#destino">Destinos Top</a></li>
+                <li><a href="#favoritos">Mis Favoritos</a></li>
+                <li><a href="#historial">Historial</a></li>
+            </ul>
+        </nav>
+        <div class="mod oscuro">
+           <button class="btn-oscuro">Modo Oscuro</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="registro">
+            <div class="modal">
+                <h3>Registro del Viajero</h3>
+                <form class="formatoR">
+                    <div class="regirstro">
+                        <label>Nombre Completo:</label>
+                        <input type="text" class="nombre-completo" required>
+                    </div>
+                    <div class="registro">
+                        <label>Correo Electrónico:</label>
+                        <input type="email" class="correo" required>
+                    </div>
+                    <div class="registro">
+                        <label>País de Residencia:</label>
+                        <input type="text" class="pais-residencia" required>
+                    </div>
+                    <button type="submit" class="btn-guardar">Ingresar al Sistema</button>
+                </form>
+            </div>
+        </section>
+
+
+        <section class="buscador" id="buscador">
+            <h2>Buscador de Destinos</h2>
+            <div class="contenidobuscar">
+                <select class="input-busqueda">
+                    <option value="" disabled selected>Selecciona un destino...</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Brazil">Brasil</option>
+                    <option value="Turquia">Turquía</option>
+                    <option value="Japan">Japón</option>
+                    <option value="France">Francia</option>
+                </select>
+                <button class="btn-buscar">Buscar</button>
+            </div>
+            <div class="carga">Cargando datos del destino...</div>
+        </section>
+        <section class="resultado-carga">
+            
+            <article class="pais">
+                </article>
+
+            <article class="clima">
+                <h3>Clima Actual</h3>
+                </article>
+
+            <article class="conversor">
+                <h3>Conversor de Moneda</h3>
+                <div class="conversor-box">
+                    <input type="number" class="monto-origen" value="1" min="1">
+                    <select class="moneda">
+                        <option value="USD">USD - Dólar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="COP">COP - Peso Colombiano</option>
+                        <option value="GBP">GBP - Libra Esterlina</option> </select>
+
+                    <span>a</span>
+
+                    <span class="moneda-destino">Moneda Local</span>
+                    <p class="resulltadoC">Resultado: <strong class="valor-convertido">0.00</strong></p>
+                </div>
+            </article>
+
+            <article class="atraciones">
+                <h3>Atracciones Turísticas</h3>
+                <div class="grid-atracciones">
+                    </div>
+            </article>
+            
+            <div class="acciones">
+                <button class="btn-fav btn-favorito-pais">Guardar País en Favoritos</button>
+            </div>
+        </section>
+
+        <section class="destino" id="destino">
+            <h2>Destinos Más Visitados</h2>
+            <div class="destinos">
+                <div class="colombia">
+                    <img src="img/'Tricolor Nacional', en el río Inírida (Guainía)_.jpg" alt="Colombia">
+                    <h4>Colombia</h4>
+                    <p>Tierra de jaguares y pumas pero nunca de tigres.</p>
+                    <hr>
+                </div>
+                <div class="brazil">
+                    <img src="img/aqua 💉.jpg" alt="Brasil">
+                    <h4>Brasil</h4>
+                    <p>El país del fútbol En las favelas encontrarás la magia hasta en los pies del más viejo.</p>
+                    <hr>
+                </div>
+                <div class="turquia">
+                    <img src="img/Google Image Result for https___towertravel_net_wp-content_uploads_2024_08_kapadokya-balon-turu-1.jpg" alt="Turquía">
+                    <h4>Turquía</h4>
+                    <p>El puente perfecto entre Europa y Asia. Déjate cautivar por la rica historia de Estambul.</p>
+                    <hr>
+                </div>
+            </div>
+        </section>
+
+        <section class="favoritos" id="favoritos">
+            <h2>Mis Favoritos</h2>
+            
+            <h3>Países Favoritos</h3>
+            <div class="lista-paises">
+                </div>
+            
+            <h3>Atracciones Favoritas</h3>
+            <div class="lista-paises">
+                </div>
+        </section>
+
+        <section class="historial" id="historial">
+            <div class="historial-header">
+                <h2>Historial de Consultas</h2>
+                <button class="limpiar">Limpiar Historial</button>
+            </div>
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>País Consultado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabla-historial">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+    
+    </main>
+
+    <footer>
+        <h5>Airplane - Plataforma de Planificación de Viajes - Todos los derechos reservados.</h5>
+        <div class="logo">
+            <img src="img/🤍.jpg" alt="">
+        </div>
+    </footer>
+
+</body>
+</html>
